@@ -1,5 +1,11 @@
 /*svg colors */
 
+#sky-day-enclosure {
+    position: absolute;
+    width:100%;
+    bottom:8.375rem;
+}
+
 .cls-1 {
     fill: #e8f3e2;
 }
@@ -307,7 +313,7 @@
     fill: #ddd162;
 }
 
-body {max-width: 1440px;}
+/*body {max-width: 1440px;}*/
 
 #needles {
     -webkit-animation: rotate 5s linear infinite;

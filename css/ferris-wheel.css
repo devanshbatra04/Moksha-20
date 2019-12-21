@@ -37,6 +37,7 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
+    z-index:1;
     height: 7.5rem;
     width: 100%;
     background: #493442 url("https://is.gd/Tv0ZyT") repeat bottom right;
@@ -198,7 +199,7 @@ body {
 .ferris-wheel {
     width: 23.4375rem;
     height: 23.4375rem;
-    z-index: 0;
+    z-index: 2;
     position: absolute;
     bottom: 8.375rem;
     left: 50%;
