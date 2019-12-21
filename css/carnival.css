@@ -561,3 +561,45 @@
         transform: translateX(5%);
     }
 }
+
+@media screen and (min-width:1000px) {
+    #sky-day-enclosure{
+        bottom:-110px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    #sky-day-enclosure{
+        bottom:-130px;
+    }
+}
+
+@media screen and (min-width:1300px) {
+    #sky-day-enclosure{
+        bottom:-150px;
+    }
+}
+
+@media screen and (min-width:1400px) {
+    #sky-day-enclosure{
+        bottom:-180px;
+    }
+}
+
+@media screen and (min-width:1700px) {
+    #sky-day-enclosure{
+        bottom:-220px;
+    }
+}
+
+@media screen and (min-width:1800px) {
+    #sky-day-enclosure{
+        bottom:-250px;
+    }
+}
+@media screen and (min-width:1900px) {
+    #sky-day-enclosure{
+        bottom:-270px;
+    }
+}
+
