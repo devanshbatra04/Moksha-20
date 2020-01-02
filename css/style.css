@@ -119,9 +119,9 @@ a {
     color: white;
 }
 
-ul, li {
-    list-style-type: none;
-}
+/*ul, li {*/
+    /*list-style-type: none;*/
+/*}*/
 
 
 
@@ -257,19 +257,15 @@ nav li:nth-child(even) a:hover {
 }
 
 nav li.active a,
-body.fp-viewing-fifthSection-1 #menu li:last-child a {
-    background: #453659;
-}
+/*body.fp-viewing-fifthSection-1 #menu li:last-child a {*/
+    /*background: #453659;*/
+/*}*/
 
 
 
 /* SECTION STYLES - fullPage.js
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-section {
-    text-align: center;
-    /*background: url('https://unsplash.it/1910/1221?image=626') no-repeat center / cover;*/
-}
 
 /*h2 {*/
     /*text-transform: lowercase;*/
