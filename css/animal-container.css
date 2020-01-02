@@ -1,0 +1,41 @@
+.animal-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    background: #F9D8AD;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.polylion {
+    max-width: 100%;
+}
+
+.animal-container > svg {
+    min-width: 300px;
+    width: 50%;
+}
+
+.animal-container > .text {
+    min-width: 300px;
+    width: 50%;
+    text-align: center;
+}
+
+.polylion polygon {
+    opacity: 0;
+}
+.no-js .polylion polygon {
+    opacity: 1;
+}
+
+.polylion {
+    height: 800px;
+}
+.no-cssanimations .polylion > polygon {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
