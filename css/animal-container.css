@@ -81,36 +81,36 @@ a {
     text-decoration: none;
 }
 
-header ul {
+#event-header ul {
     width: 100%;
     padding: 20px;
     list-style: none;
     display: flex;
     background: #272e38;
 }
-header ul li {
+#event-header ul li {
     font-weight: 300;
     font-size: 14px;
     padding: 0 10px;
     position: relative;
 }
-header ul li a {
+#event-header ul li a {
     color: #606770;
     transition: all .25s ease;
 }
-header ul li a:hover {
+#event-header ul li a:hover {
     color: #fff;
 }
-header ul li:after {
+#event-header ul li:after {
     content: '/';
     position: absolute;
     right: -2px;
     color: #fff;
 }
-header ul li:last-of-type:after {
+#event-header ul li:last-of-type:after {
     content: ' ';
 }
-header .credits {
+#event-header .credits {
     font-size: 14px;
     background: transparent;
     color: #606770;

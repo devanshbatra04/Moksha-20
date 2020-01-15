@@ -119,9 +119,9 @@ a {
     color: white;
 }
 
-/*ul, li {*/
-    /*list-style-type: none;*/
-/*}*/
+ul, li {
+    list-style-type: none;
+}
 
 
 
@@ -285,9 +285,9 @@ nav li.active a,
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
-    background: white;
-    width: 8px;
-    height: 8px;
+    /*background: white;*/
+    /*width: 8px;*/
+    /*height: 8px;*/
     margin: -4px 0 0 -4px;
 }
 
