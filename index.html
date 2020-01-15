@@ -28,19 +28,19 @@
     <nav class="hide">
         <ul id="menu">
             <li data-menuanchor="firstSection">
-                <a href="#firstSection" title="First Section">First Section</a>
+                <a href="#firstSection" title="First Section">Home</a>
             </li>
             <li data-menuanchor="secondSection">
-                <a href="#secondSection" title="Second Section">Second Section</a>
+                <a href="#secondSection" title="Second Section">Pronites</a>
             </li>
             <li data-menuanchor="thirdSection">
-                <a href="#thirdSection" title="Second Section">Third Section</a>
+                <a href="#thirdSection" title="Second Section">Events and Competitions</a>
             </li>
             <li data-menuanchor="fourthSection">
-                <a href="#fourthSection" title="Fourth Section">Fourth Section</a>
+                <a href="#fourthSection" title="Fourth Section">A Look Back</a>
             </li>
             <li data-menuanchor="fifthSection">
-                <a href="#fifthSection" title="Fifth Section">Fifth Section</a>
+                <a href="#fifthSection" title="Fifth Section">Contact Us</a>
             </li>
         </ul>
     </nav>
@@ -1381,6 +1381,30 @@
         </div>
     </section>
 </div>
+<script type="text/javascript">
+    (function(d){
+        function C(k){return(d.cookie.match('(^|; )'+k+'=([^;]*)')||0)[2];}
+        var ua = navigator.userAgent,
+            ismobile = / mobile/i.test(ua),
+            mgecko = !!( / gecko/i.test(ua) && / firefox\//i.test(ua)),
+            wasmobile = C('wasmobile') === "was",
+            desktopvp = 'user-scalable=yes, maximum-scale=2',
+            el;
+        if(ismobile && !wasmobile){
+            d.cookie = "wasmobile=was";
+        }
+        else if (!ismobile && wasmobile){
+            if (mgecko) {
+                el = d.createElement('meta');
+                el.setAttribute('content',desktopvp);
+                el.setAttribute('name','viewport');
+                d.getElementsByTagName('head')[0].appendChild( el );
+            }else{
+                d.getElementsByName('viewport')[0].setAttribute('content',desktopvp);
+            }
+        }
+    }(document));
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 <script src="./js/fullpage-script.js"></script>
