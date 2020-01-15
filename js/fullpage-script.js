@@ -14,7 +14,7 @@ $header_top.find('a').on('click', function() {
 
 // fullpage customization
 $('#fullpage').fullpage({
-    sectionsColor: ['#e8f3e2', '#B8B89F', '#348899', '#31363b', '#5C832F'],
+    sectionsColor: ['#e8f3e2', '#B8B89F', '#348899', '#31363b', '#5C832F', '#5C832F'],
     sectionSelector: '.vertical-scrolling',
     slideSelector: '.horizontal-scrolling',
     navigation: true,
@@ -38,8 +38,8 @@ $('#fullpage').fullpage({
     },
 
     afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex) {
-        if(anchorLink == 'fifthSection' && slideIndex == 1) {
-            $.fn.fullpage.setAllowScrolling(false, 'up');
+        if(anchorLink == 'lookback' && slideIndex == 1) {
+            // $.fn.fullpage.setAllowScrolling(false, 'up');
             $header_top.css('background', 'transparent');
             $nav.css('background', 'transparent');
             $(this).css('background', '#374140');
@@ -56,10 +56,11 @@ $('#fullpage').fullpage({
     },
 
     onSlideLeave: function( anchorLink, index, slideIndex, direction) {
-        if(anchorLink == 'fifthSection' && slideIndex == 1) {
+        if(anchorLink == 'lookback' && slideIndex == 1) {
             $.fn.fullpage.setAllowScrolling(true, 'up');
             $header_top.css('background', 'rgba(0, 47, 77, .3)');
             $nav.css('background', 'rgba(0, 47, 77, .25)');
+            console.log("left");
         }
     }
 });
