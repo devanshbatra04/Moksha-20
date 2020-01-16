@@ -3,7 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moksha NSUT</title>
+    <title>Moksha'20</title>
+    <script type="text/javascript">
+        function parseUA() {
+            var u = navigator.userAgent;
+            var u2 = navigator.userAgent.toLowerCase();
+            return {
+                trident: u.indexOf('Trident') > -1,
+                presto: u.indexOf('Presto') > -1,
+                webKit: u.indexOf('AppleWebKit') > -1,
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/),
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                iPhone: u.indexOf('iPhone') > -1,
+                iPad: u.indexOf('iPad') > -1,
+                webApp: u.indexOf('Safari') == -1,
+                iosv: u.substr(u.indexOf('iPhone OS') + 9, 3),
+                weixin: u2.match(/MicroMessenger/i) == "micromessenger",
+                ali: u.indexOf('AliApp') > -1,
+            };
+        }
+        var ua = parseUA();
+
+        if (ua.mobile) {
+            location.href = './mobile.html';
+        }
+    </script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/multi-page.css">
     <link rel="stylesheet" href="./css/ferris-wheel.css">
@@ -1196,13 +1222,13 @@
     <section class="vertical-scrolling">
         <!--<h3>Events</h3>-->
         <div class="horizontal-scrolling" style="background: white;">
-            <img style="display: block; margin: 0 auto;" src="./images/past-sponsors1.jpeg" alt="">
+            <img style="display: block; margin: 0 auto; max-width: 90%; height: auto;" src="./images/past-sponsors1.jpeg" alt="">
         </div>
         <div class="horizontal-scrolling" style="background: white;">
-            <img style="display: block; margin: 0 auto;" src="./images/past-sponsors2.jpeg" alt="">
+            <img style="display: block; margin: 0 auto; max-width: 90%; height: auto;" src="./images/past-sponsors2.jpeg" alt="">
         </div>
         <div class="horizontal-scrolling" style="background: white;">
-            <img style="display: block; margin: 0 auto;" src="./images/past-sponsors3.jpeg" alt="">
+            <img style="display: block; margin: 0 auto; max-width: 90%; height: auto;" src="./images/past-sponsors3.jpeg" alt="">
         </div>
     </section>
     <section class="vertical-scrolling">
@@ -1243,6 +1269,7 @@
                         <!--</ul>-->
                     <!--</div>-->
                 <!--</div>-->
+
                 <!--<form class="form-horizontal" role="form" method="post" action="contact.php">-->
 
                     <!--<div class="form-group">-->
@@ -1401,32 +1428,7 @@
         </div>
     </section>
 </div>
-<script type="text/javascript">
-    function parseUA() {
-        var u = navigator.userAgent;
-        var u2 = navigator.userAgent.toLowerCase();
-        return {
-            trident: u.indexOf('Trident') > -1,
-            presto: u.indexOf('Presto') > -1,
-            webKit: u.indexOf('AppleWebKit') > -1,
-            gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
-            mobile: !!u.match(/AppleWebKit.*Mobile.*/),
-            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
-            android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
-            iPhone: u.indexOf('iPhone') > -1,
-            iPad: u.indexOf('iPad') > -1,
-            webApp: u.indexOf('Safari') == -1,
-            iosv: u.substr(u.indexOf('iPhone OS') + 9, 3),
-            weixin: u2.match(/MicroMessenger/i) == "micromessenger",
-            ali: u.indexOf('AliApp') > -1,
-        };
-    }
-    var ua = parseUA();
 
-    if (ua.mobile) {
-        location.href = './mobile.html';
-    }
-</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 <script src="./js/fullpage-script.js"></script>
