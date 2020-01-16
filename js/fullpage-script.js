@@ -20,7 +20,7 @@ $('#fullpage').fullpage({
     navigation: true,
     slidesNavigation: true,
     controlArrows: false,
-    anchors: ['home', 'pronites', 'events', 'lookback', 'contact'],
+    anchors: ['home', 'pronites', 'events', 'lookback', 'sponsors', 'contact'],
     menu: '#menu',
 
     afterLoad: function(anchorLink, index) {
@@ -60,7 +60,6 @@ $('#fullpage').fullpage({
             $.fn.fullpage.setAllowScrolling(true, 'up');
             $header_top.css('background', 'rgba(0, 47, 77, .3)');
             $nav.css('background', 'rgba(0, 47, 77, .25)');
-            console.log("left");
         }
     }
 });
