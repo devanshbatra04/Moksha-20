@@ -79,7 +79,7 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    overflow-x: none;
+    /*overflow-x: none;*/
 }
 
 ul {
