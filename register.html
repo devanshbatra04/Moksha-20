@@ -49,7 +49,7 @@
     .testbox {
         margin: 20px auto;
         width: 343px;
-        height: 560px;
+        height: 580px;
         -webkit-border-radius: 8px/7px;
         -moz-border-radius: 8px/7px;
         border-radius: 8px/7px;
@@ -194,49 +194,75 @@
 
     }
 
+    body:before{
+        content: '';
+        position: fixed;
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("./images/form-back.jpeg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        -webkit-filter: blur(10px);
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+    }
+
+    .container{
+        display:flex;
+        width:100vw;
+        height:100vh;
+        align-items: center;
+    }
+
 
 </style>
 <body>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+<div class="container">
+    <div class="testbox">
+            <img src="./images/moksha-20-redpink.png" style="width:250px; height:auto; display: block; margin: 10px auto;" alt="">
 
-<div class="testbox">
-        <img src="./images/moksha-20-redpink.png" style="width:250px; height:auto; display: block; margin: 10px auto;" alt="">
+        <h1>Event Registration</h1>
 
-    <h1>Event Registration</h1>
-
-    <form action="https://getform.io/f/2ea83546-b9bc-40a9-b036-4e9ed1136643" method="post">
-        <hr>
-        <div class="accounttype">
-            <input type="radio" value="Attendee" id="radioOne" name="Type" checked/>
-            <label for="radioOne" class="radio">Attendee</label>
-            <input type="radio" value="Participant" id="radioTwo" name="Type" />
-            <label for="radioTwo" class="radio">Participant</label>
-        </div>
-        <label for="eventOptions">Select Event</label>
-        <select id="eventOptions" name="event">
-            <option value="karaoke">Karaoke</option>
-            <option value="karaoke">Karaoke</option>
-            <option value="karaoke">Karaoke</option>
-            <option value="karaoke">Karaoke</option>
-            <option value="karaoke">Karaoke</option>
-            <option value="karaoke">Karaoke</option>
-        </select>
-        <hr>
-        <label id="icon" for="name"><i class="icon-envelope "></i></label>
-        <input type="text" name="email" id="name" placeholder="Email" required/>
-        <label id="icon" for="name"><i class="icon-user"></i></label>
-        <input type="text" name="name" id="name" placeholder="Name" required/>
-        <label id="icon" for="name"><i class="icon-shield"></i></label>
-        <input type="text" name="college" id="name" placeholder="College" required/>
-        <label id="icon" for="name"><i class="icon-shield"></i></label>
-        <input type="text" name="phone" id="name" placeholder="Contact Number" required/>
-        <label id="icon" for="name"><i class="icon-shield"></i></label>
-        <input type="text" name="team" id="name" placeholder="Team Name (if applicable)"/>
-        <!--<p>NOTE: You are registering for the event <strong><span class="event-name">Karaoke</span></strong>.</p>-->
-        <input class="button" type="submit">
-        <!--<a href="#" class="button">Register</a>-->
-    </form>
+        <form action="https://getform.io/f/2ea83546-b9bc-40a9-b036-4e9ed1136643" method="post">
+            <hr>
+            <div class="accounttype">
+                <input type="radio" value="Attendee" id="radioOne" name="Type" checked/>
+                <label for="radioOne" class="radio">Attendee</label>
+                <input type="radio" value="Participant" id="radioTwo" name="Type" />
+                <label for="radioTwo" class="radio">Participant</label>
+            </div>
+            <label for="eventOptions">Select Event</label>
+            <select id="eventOptions" name="event">
+                <option value="karaoke">Karaoke</option>
+                <option value="karaoke">Karaoke</option>
+                <option value="karaoke">Karaoke</option>
+                <option value="karaoke">Karaoke</option>
+                <option value="karaoke">Karaoke</option>
+                <option value="karaoke">Karaoke</option>
+            </select>
+            <hr>
+            <label id="icon" for="name"><i class="icon-envelope "></i></label>
+            <input type="text" name="email" id="name" placeholder="Email" required/>
+            <label id="icon" for="name"><i class="icon-user"></i></label>
+            <input type="text" name="name" id="name" placeholder="Name" required/>
+            <label id="icon" for="name"><i class="icon-shield"></i></label>
+            <input type="text" name="college" id="name" placeholder="College" required/>
+            <label id="icon" for="name"><i class="icon-shield"></i></label>
+            <input type="text" name="phone" id="name" placeholder="Contact Number" required/>
+            <label id="icon" for="name"><i class="icon-shield"></i></label>
+            <input type="text" name="team" id="name" placeholder="Team Name (if applicable)"/>
+            <!--<p>NOTE: You are registering for the event <strong><span class="event-name">Karaoke</span></strong>.</p>-->
+            <input class="button" type="submit">
+            <!--<a href="#" class="button">Register</a>-->
+        </form>
+    </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script>
