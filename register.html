@@ -271,7 +271,7 @@
         var structured_data = [];
         var ids = sheetData.filter(cellObj => cellObj.gs$cell.col=== "1");
         var event_names = sheetData.filter(cellObj => cellObj.gs$cell.col=== "2");
-        for (var i = 0; i < (sheetData.length / 2); i++) {
+        for (var i = 0; i < ids.length; i++) {
             structured_data.push({id: ids[i].content.$t, name: event_names[i].content.$t});
         }
         window.structured_data = structured_data;
