@@ -213,6 +213,15 @@
             <input type="radio" value="Participant" id="radioTwo" name="Type" />
             <label for="radioTwo" class="radio">Participant</label>
         </div>
+        <label for="eventOptions">Select Event</label>
+        <select id="eventOptions" name="event">
+            <option value="karaoke">Karaoke</option>
+            <option value="karaoke">Karaoke</option>
+            <option value="karaoke">Karaoke</option>
+            <option value="karaoke">Karaoke</option>
+            <option value="karaoke">Karaoke</option>
+            <option value="karaoke">Karaoke</option>
+        </select>
         <hr>
         <label id="icon" for="name"><i class="icon-envelope "></i></label>
         <input type="text" name="email" id="name" placeholder="Email" required/>
@@ -224,27 +233,38 @@
         <input type="text" name="phone" id="name" placeholder="Contact Number" required/>
         <label id="icon" for="name"><i class="icon-shield"></i></label>
         <input type="text" name="team" id="name" placeholder="Team Name (if applicable)"/>
-        <!--<div class="gender">-->
-            <!--<input type="radio" value="None" id="male" name="gender" checked/>-->
-            <!--<label for="male" class="radio" chec>Male</label>-->
-            <!--<input type="radio" value="None" id="female" name="gender" />-->
-            <!--<label for="female" class="radio">Female</label>-->
-        <!--</div>-->
-        <input type="hidden" name="event" id="event-input">
-        <p>NOTE: You are registering for the event <strong><span class="event-name">Karaoke</span></strong>.</p>
+        <!--<p>NOTE: You are registering for the event <strong><span class="event-name">Karaoke</span></strong>.</p>-->
         <input class="button" type="submit">
         <!--<a href="#" class="button">Register</a>-->
     </form>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script>
+    function displayEvents (json) {
+        var sheetData = json.feed.entry.filter(cellObj => cellObj.gs$cell.row!== "1");
+        var structured_data = [];
+        var ids = sheetData.filter(cellObj => cellObj.gs$cell.col=== "1");
+        var event_names = sheetData.filter(cellObj => cellObj.gs$cell.col=== "2");
+        for (var i = 0; i < (sheetData.length / 2); i++) {
+            structured_data.push({id: ids[i].content.$t, name: event_names[i].content.$t});
+        }
+        window.structured_data = structured_data;
+        var htmlcode = structured_data.map(item => `<option value=${item.name}>${item.name}</option>`).join(" ");
+        console.log(sheetData);
+        // $('#eventOptions').html = htmlcode;
+        document.getElementById('eventOptions').innerHTML = htmlcode;
+
+    }
+    fetch("https://spreadsheets.google.com/feeds/cells/1erNs5isd8bJZRD5cSkwI1HSgsCLYubKivq42TUXTirg/1/public/full?alt=json")
+        .then(data => data.json())
+        .then(displayEvents);
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
     var event = urlParams.get("event");
-    if (event) {
-        $('.event-name')[0].textContent = event;
-        $('#event-input').val(event)
-    }
+    // if (event) {
+    //     $('.event-name')[0].textContent = event;
+    //     $('#event-input').val(event)
+    // }
 </script>
 </body>
 </html>
