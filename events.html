@@ -9,6 +9,27 @@
 
 </head>
 <body>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Thank You For Registering</h4>
+            </div>
+            <div class="modal-body">
+                <p>We have received your registration and your contact details have been forwarded to the organising team, they will reach out to you after filtering all responses.
+                    <br>Meanwhile, do check out other exciting events and pronites at Moksha 2020!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
 <div class='container'>
     <img src="./images/moksha-20-redpink.png" style="display: block; margin: 20px; auto; height: 100px; width:auto;">
     <div class="portfolioFilter">
@@ -106,6 +127,13 @@
             `).join(" ");
             console.log(structured_data);
             // $('#eventOptions').html = htmlcode;
+            var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var thankyou = urlParams.get("thankyou");
+            if (thankyou) {
+                $('#myModal').modal();
+            }
+
             document.getElementsByClassName('portfolioContainer')[0].innerHTML = htmlcode;
             var html_eventPopups = structured_data.map(item =>`<div id="popup${item.id}" class="overlay">
             <div class="popup">
@@ -166,8 +194,7 @@
                 }
             });
 
-            var queryString = window.location.search;
-            var urlParams = new URLSearchParams(queryString);
+
             var category = urlParams.get("category");
             if (category) {
                 $('.portfolioFilter .current').removeClass('current');
