@@ -30,6 +30,12 @@
             location.href = './mobile.html';
         }
     </script>
+    <style>
+        #category-descriptions a {
+            color: #f06968;
+            text-decoration: underline;
+        }
+    </style>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/multi-page.css">
     <link rel="stylesheet" href="./css/ferris-wheel.css">
@@ -50,6 +56,19 @@
             <i></i>
             <i></i>
             <i></i>
+        </a>
+        <a href="./register.html">
+            <button style="float: right; position: relative;
+                top: 10px;
+                right: 10px;
+                background-color: #f06968;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px; cursor: pointer;">Registration Forms Out!</button>
         </a>
     </div>
 
@@ -1087,8 +1106,8 @@
                         <path class="cls-2" d="M923.71,204c-30.28.41-54.9,24.67-55.06,54.23,0,1.12,0,2.23.09,3.33a5.6,5.6,0,0,0,5.58-4.93,5.68,5.68,0,0,0,11.1-.27,5.67,5.67,0,0,0,11.15,0,5.67,5.67,0,0,0,11.15,0,5.67,5.67,0,0,0,11.15,0,5.65,5.65,0,0,0,5.62,4.63h0V204h-0.8Z"/>
                         <path class="cls-36" d="M925.25,204h-0.8l0,57a5.63,5.63,0,0,0,5.5-4.38,5.75,5.75,0,0,0,11.16,0,5.75,5.75,0,0,0,11.16,0,5.75,5.75,0,0,0,11.16,0,5.75,5.75,0,0,0,11.1.22,5.64,5.64,0,0,0,5.64,4.72h0c0.06-1.1.09-2.21,0.09-3.33C980.15,228.71,955.52,204.45,925.25,204Z"/>
                         <path class="cls-4" d="M925.25,204h-0.8l0,57a5.63,5.63,0,0,0,5.5-4.38,5.75,5.75,0,0,0,11.16,0,5.75,5.75,0,0,0,11.16,0,5.75,5.75,0,0,0,11.16,0,5.75,5.75,0,0,0,11.1.22,5.64,5.64,0,0,0,5.64,4.72h0c0.06-1.1.09-2.21,0.09-3.33C980.15,228.71,955.52,204.45,925.25,204Z"/>
-                        <text x="925" y="250" dominant-baseline="middle" text-anchor="middle">March</text>
-                        <text x="925" y="270" dominant-baseline="middle" text-anchor="middle">2020</text>
+                        <text x="925" y="250" dominant-baseline="middle" text-anchor="middle" font-size="12">20-22 March</text>
+                        <text x="925" y="270" dominant-baseline="middle" text-anchor="middle" font-size="12">2020</text>
                     </g>
                 </g>
             </svg>
@@ -1154,34 +1173,34 @@
                     </ul>
 
                 </header>
-                <div id="category-descriptions" style="width:80%; height: 140px; background:white; margin:20px auto; border-radius:15%; color:#202020; display:flex; justify-content: space-around; flex-direction:column;">
-                    <h3 class="event-head individual-head" style="display: none;">Individual Competitions</h3>
-                    <p class="event-head individual-head" style="display:none; padding-left:5%; padding-right:5%;">An amazing place to compete individually, Moksha provides you the platform to show off your skills and return home a winner.</p>
-                    <h3 class="event-head team-head" style="display: none;">Team Competitions</h3>
+                <div id="category-descriptions" style="max-width:500px; height: 140px; background:white; margin:20px auto; border-radius:20px 20px 20px 20px; color:#202020; display:flex; justify-content: space-around; flex-direction:column;">
+                    <a style="display: none;" href="./events.html?category=literature"><h3 class="event-head individual-head">Literature</h3></a>
+                    <p class="event-head individual-head" style="display:none; padding-left:5%; padding-right:5%;">An amazing place to let your heart out, Moksha provides you the platform to show off to an a  audience.</p>
+                    <a style="display: none;" href="./events.html?category=dance"><h3 class="event-head team-head">Dance</h3></a>
                     <p class="event-head team-head" style="display:none; padding-left:5%; padding-right:5%;">Participate as a team and win exciting prizes! Some of these events may allow on-site team formation.</p>
-                    <h3 class="event-head individual-head" style="display: none;">Society Events</h3>
+                    <a style="display: none;" href="./events.html?category=drama"><h3 class="event-head individual-head">Drama</h3></a>
                     <p class="event-head individual-head" style="display:none; padding-left:5%; padding-right:5%;">Events organised by student societies at NSUT. Also lists events meant for other college societies to participate in.</p>
-                    <h3 class="event-head individual-head" style="display: none;">Performances</h3>
+                    <a style="display: none;" href="./events.html?category=music"><h3 class="event-head individual-head">Music</h3></a>
                     <p class="event-head individual-head" style="display:none; padding-left:5%; padding-right:5%;">Witness some of the most amazing performances across genres. You can also register as a participant.</p>
-                    <h3 class="event-head individual-head" style="display: none;">Misc. Events</h3>
+                    <a style="display: none;" href="./events.html?category=misc"><h3 class="event-head individual-head">Misc. Events</h3></a>
                     <p class="event-head individual-head" style="display:none; padding-left:5%; padding-right:5%;">Cultural fests are supposed to be fun. This category includes all the fun events not included before.</p>
 
                 </div>
-                <div class="main-nav" style="display: flex; width: 100%;">
+                <div class="main-nav" style="display: flex; width: 100%; margin:20px auto;">
 
                     <ul>
                         <li data-id="1" data-target="individual-info" class="weather active">
                             <!--         <div class="menuicon fa fa-bars"></div> -->
 
                             <div class="icon fab fa-angellist fa-3x"></div>
-                            <span>Individual Competitions</span>
+                            <span>Literature Events</span>
                         </li>
 
 
                         <li data-id="2" data-target="team-info" class="gallery">
                             <!--         <div class="menuicon fa fa-bars"></div> -->
                             <div class="icon fas fa-user-friends fa-2x"></div>
-                            <span>Team Competitions</span>
+                            <span>Dance Events</span>
                         </li>
 
 
@@ -1189,7 +1208,7 @@
                             <!--         <div class="menuicon fa fa-bars"></div> -->
 
                             <div class="icon fas fa-theater-masks fa-2x"></div>
-                            <span>Society Events</span>
+                            <span>Drama Events</span>
                         </li>
 
 
@@ -1197,7 +1216,7 @@
                             <!--         <div class="menuicon fa fa-bars"></div> -->
 
                             <div class="icon fas fa-music fa-2x"></div>
-                            <span>Performances</span>
+                            <span>Music Events</span>
                         </li>
 
 
@@ -1267,23 +1286,6 @@
         </div>
     </section>
 
-    <section class="vertical-scrolling">
-        <!--<h3>Events</h3>-->
-            <div class="container-images">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            </div>
-
-            <div class="text-box">
-                <span class="text">A Flashback</span>
-            </div>
-    </section>
     <section class="vertical-scrolling">
         <!--<h3>Events</h3>-->
         <div class="horizontal-scrolling" style="background: white;">

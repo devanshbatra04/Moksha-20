@@ -52,7 +52,7 @@ function showSlides(n) {
     iconlis.removeClass('active');
     $(iconlis[slideIndex-1]).toggleClass('active');
 
-    var headings = $('#category-descriptions h3');
+    var headings = $('#category-descriptions a');
     headings.removeClass('active-block');
     $(headings[slideIndex-1]).toggleClass('active-block');
 
