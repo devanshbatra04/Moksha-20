@@ -149,6 +149,19 @@
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fecd32', endColorstr='#f75e73',GradientType=1 );
             /* IE6-9 fallback on horizontal gradient */
         }
+
+        @media screen and (min-height:730px) {
+            .ground button {
+                display:inline-block !important;
+            }
+            .ferris-wheel {
+                bottom: 11.575rem !important;
+            }
+            .ground {
+                height: 10.7rem !important;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -484,7 +497,7 @@
                 <div class="ferris-base--handle"></div>
             </div>
         </div>
-        <div class="ground" style="display:flex; align-items:auto;">
+        <div class="ground" style="display:flex; align-items:auto; flex-wrap: wrap;">
             <img src="./images/moksha-white.png" alt="" style="
                 width: auto;
                 max-height: 80%;
@@ -493,6 +506,42 @@
                 max-width:90%;
                 height:auto;
             ">
+            <div class="details-below-logo" style="width:100vw;">
+                <a href="./register.html">
+                    <button style="float: right; position: relative;
+                top: 10px;
+                right: 10px;
+                background-color: #f06968;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                /*display: inline-block;*/
+                font-size: 16px;
+                cursor: pointer;
+                margin-right:10px;
+                display: none;
+                ">Quick Register</button>
+                </a>
+                <a href="./events.html">
+                    <button style="float: right; position: relative;
+                top: 10px;
+                right: 10px;
+                background-color: #f06968;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                /*display: inline-block;*/
+                font-size: 16px;
+                cursor: pointer;
+                margin-right:10px;
+                display: none;
+                ">Explore Events</button>
+                </a>
+            </div>
         </div>
         <!--<div class="scroll-icon">-->
             <!--<p>Jump into the last slide</p>-->
@@ -788,5 +837,6 @@
 <script src="./js/fullpage-script-mobile.js"></script>
 <script src="./js/atvimg.js"></script>
 <script src="./js/animals.js"></script>
+
 </body>
 </html>
